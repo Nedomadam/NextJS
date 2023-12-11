@@ -1,0 +1,32 @@
+{
+  "name": "shopping-list-app",
+  "version": "0.1.0",
+  "private": true,
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "prisma generate && prisma db push --accept-data-loss"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.7.0",
+    "next": "14.0.4",
+    "prisma": "^5.7.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "styled-components": "^6.1.1",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "typescript": "^5"
+  }
+}
