@@ -26,6 +26,27 @@ async function main() {
         ]
 
     })
+
+    await prisma.items.createMany({
+        data: [
+            {
+                id: 1,
+                name: "Prvni item",
+                count: 2,
+                //unit Units
+                unitId: 1,
+                done: false,
+            },
+            {
+                id: 1,
+                name: "Druhy item",
+                count: 2,
+                //unit Units
+                unitId: 1,
+                done: false,
+            }
+        ]
+    })
 }
 
 main()
