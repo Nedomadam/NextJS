@@ -1,7 +1,8 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import prisma from "@/lib/prisma";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req: NextApiRequest | Request, res: NextApiResponse) {
+export async function GET(req: NextRequest | Request, res: NextResponse) {
     const items = await prisma.item.findMany({
       select: {
         id: true,
