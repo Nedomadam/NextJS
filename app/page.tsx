@@ -260,7 +260,7 @@ const deleteSelectedItems = () => {
     </React.Fragment>
   );
 
-  const [selectedItems, setSelectedItems] = useState<Item[] | null>(null);
+  const [selectedItems, setSelectedItems] = useState<Item[] | null>([emptyItem]);
   const [rowClick, setRowClick] = useState<boolean>(true);
 
   return (
